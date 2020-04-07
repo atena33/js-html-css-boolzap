@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Qui iniziano le regole generali */
+.background{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100% );
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+.quadrato {
+  width: 80vw;
+  height: 90vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 1px gray;
+  z-index: 999;
+  flex-shrink: 2;
+}
+
+/* Regole dell'header */
+header {
+  background: #EAEAEA;
+  height: 10vh;
+  width: 80vw;
+  /* position: static;
+  top:5vh; */
+  display: flex;
+}
+
+.container {
+  display:flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header-left{
+  width: 25vw;
+  border-right: solid 1px;
+}
+
+.header-right{
+  width: 55vw;
+}
+
+/* Regole del main */
+main {
+  display: flex;
+}
+.main-left {
+  height: 80vh;
+  background: white;
+  width: 25vw;
+}
+
+.main-right {
+  height: 65vh;
+  background: yellow;
+  width: 55vw;
+}
+
+footer {
+  background: blue;
+  width: 55vw;
+  height: 15vh;
+  position: absolute;
+  left: 25vw;
+  bottom: 0;
+}
