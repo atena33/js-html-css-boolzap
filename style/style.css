@@ -14,61 +14,151 @@
 }
 
 .quadrato {
-  width: 80vw;
-  height: 90vh;
+  width: 80%;
+  height: 90%;
   margin-left: 10%;
   margin-right: 10%;
   border: solid 1px gray;
   z-index: 999;
   flex-shrink: 2;
+  font-family: 'lato', sans-serif;
+}
+
+img{
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+p {
+  color: gray;
+  font-size: 12px;
 }
 
 /* Regole dell'header */
 header {
   background: #EAEAEA;
-  height: 10vh;
-  width: 80vw;
-  /* position: static;
-  top:5vh; */
+  height: 70px;
+  width: 100%;
   display: flex;
+}
+
+.icone-header .fas {
+  font-size: 20px;
+  color: lightgray;
+  padding: 0 10px;
 }
 
 .container {
   display:flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
 .header-left{
-  width: 25vw;
-  border-right: solid 1px;
+  width: 33%;
+  border-right: solid 1px lightgray;
 }
 
 .header-right{
-  width: 55vw;
+  width: 67%;
 }
 
 /* Regole del main */
 main {
   display: flex;
-}
-.main-left {
-  height: 80vh;
+  width: 100%;
+  height: calc(100% -70px);
   background: white;
-  width: 25vw;
 }
 
+.container2{
+  display: flex;
+  align-items: center;
+}
+.main-left {
+  height: 100%;
+  background: white;
+  width: 33%;
+}
+.fa-bell-slash{
+  font-size: 25px;
+  color: white;
+  padding: 30px 15px;
+}
+.notifiche {
+  width: 100%;
+  background: #8EDAFC;
+}
+
+#stile p {
+  color: black;
+  font-size: 16px;
+}
+#stile a {
+  color: gray;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+#barra {
+  width: 90%;
+  margin-left: 5%;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid 1px gray;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  color: lightgray;
+}
+
+#barra input {
+  border: none;
+  padding: 10px;
+}
+
+#barra .fa-search {
+  padding: 0 15px;
+}
+
+.chat {
+  border: solid 1px lightgray;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.chat:hover {
+  background-color: lightgray;
+
+}
+
+.over {
+  overflow-y:scroll;
+  height: 350px;
+
+}
 .main-right {
-  height: 65vh;
+  height: calc(90vh - 70px);
   background: yellow;
-  width: 55vw;
+  width: 67%;
 }
 
 footer {
   background: blue;
-  width: 55vw;
-  height: 15vh;
+  width: 53.5%;
+  height: 70px;
   position: absolute;
-  left: 25vw;
-  bottom: 0;
+  left: 36.5%;
+  bottom: 30px;
 }
