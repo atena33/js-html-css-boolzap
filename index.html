@@ -58,7 +58,7 @@
           </div>
         </header>
 
-        <section>
+        <section id="main">
           <!-- Qui inizia il main, cioè la parte in cui si sviluppano le chat -->
           <main>
             <div class="main-left">
@@ -79,6 +79,7 @@
                 <i class="fas fa-search"></i>
                 <input type="text" name="" value="Cerca o inizia chat">
               </div>
+              <!-- Qui inizia la parte con le chat -->
               <div class="over">
                 <div class="chat container2">
                   <img src="img/avatar1.jpg" alt="profilo">
@@ -168,40 +169,54 @@
                     </p>
                   </div>
                 </div>
-
-
-
-
-
-
-
-
               </div>
-
             </div>
 
             <!-- Qui inizia la parte destra del main -->
             <div class="main-right">
-
+              <div class="over">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Ciao, come stai?
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </main>
 
-           <!-- Qui inizia il footer, cioè la parte dove si dà l'imput di chat -->
+          <!-- Qui inizia il footer, cioè la parte dove si dà l'imput di chat -->
           <footer>
-
+            <i class="far fa-smile"></i>
+            <input id="msg"type="text" name="" value="Scrivi un messaggio">
+            <a class="invia"href="#">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
           </footer>
-
         </section>
-
-
-
       </section>
-
-
     </section>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../main/main.js" charset="utf-8"></script>
+    <script src="main/main.js" charset="utf-8"></script>
   </body>
 </html>

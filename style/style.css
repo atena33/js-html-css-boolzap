@@ -7,6 +7,7 @@
 .background{
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100% );
   display: flex;
   align-items: center;
@@ -22,6 +23,7 @@
   z-index: 999;
   flex-shrink: 2;
   font-family: 'lato', sans-serif;
+  position: relative;
 }
 
 img{
@@ -39,6 +41,10 @@ a {
 p {
   color: gray;
   font-size: 12px;
+}
+
+#main {
+  height: 100%;
 }
 
 /* Regole dell'header */
@@ -76,7 +82,7 @@ header {
 main {
   display: flex;
   width: 100%;
-  height: calc(100% -70px);
+  height: calc(100% - 70px);
   background: white;
 }
 
@@ -84,10 +90,12 @@ main {
   display: flex;
   align-items: center;
 }
+/* Qui iniziano le regole della parte sinistra del mains */
 .main-left {
-  height: 100%;
   background: white;
   width: 33%;
+  display: flex;
+  flex-direction: column;
 }
 .fa-bell-slash{
   font-size: 25px;
@@ -145,20 +153,61 @@ main {
 
 .over {
   overflow-y:scroll;
-  height: 350px;
-
+  height: 100%;
 }
+/* Qui inizia la parte destra del main */
 .main-right {
-  height: calc(90vh - 70px);
-  background: yellow;
+  height: 100%;
   width: 67%;
+  background-image: url(../img/Sfondo.jpg);
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.flotta {
+  float: right;
+}
+
+.ricevuto, .inviato {
+  padding: 20px;
+  margin: 20px 30px;
+  background: white;
+  border-radius: 5px;
+  max-width: 200px;
+}
+.inviato {
+  background: lightgreen;
+}
+.messaggio {
+  color: black;
+  font-size: 16px;
+}
+
+.orario {
+  float: right;
+}
+/* Qui iniziano le regole del footer */
 footer {
-  background: blue;
-  width: 53.5%;
+  background: #F3EEEA;
+  width: 67%;
   height: 70px;
   position: absolute;
-  left: 36.5%;
-  bottom: 30px;
+  bottom: 0px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+footer input {
+  width: 80%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+footer i {
+  font-size: 30px;
+  color: gray;
 }
