@@ -175,6 +175,7 @@ main {
   background: white;
   border-radius: 5px;
   max-width: 200px;
+  position: relative;
 }
 .inviato {
   background: lightgreen;
@@ -185,7 +186,9 @@ main {
 }
 
 .orario {
-  float: right;
+  position: absolute;
+   bottom: 5px;
+   right: 5px;
 }
 /* Qui iniziano le regole del footer */
 footer {
