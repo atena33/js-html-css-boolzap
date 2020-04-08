@@ -157,7 +157,7 @@ main {
 }
 /* Qui inizia la parte destra del main */
 .main-right {
-  height: 100%;
+  height: calc(100% - 70px);
   width: 67%;
   background-image: url(../img/Sfondo.jpg);
   content: "";
@@ -165,8 +165,9 @@ main {
   clear: both;
 }
 
+
 .flotta {
-  display: flex;
+   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
@@ -217,4 +218,11 @@ footer {
 footer i {
   font-size: 30px;
   color: gray;
+}
+
+.visible {
+  display: block;
+}
+.invisible {
+  display: none;
 }

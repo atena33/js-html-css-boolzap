@@ -24,6 +24,40 @@ $ (document).ready(function(){
         $('.over').append('<div class="ricevuto">' + 'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
       }
     }
+  );
+
+  // Ricerca utenti: scrivendo qualcosa nell’input a sinistra,
+  // vengono visualizzati solo i contatti il cui nome
+  //  contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar”
+  //   rimangono solo Marco e Martina)
+
+  $('#cerca').keypress(
+    function(){
+      //salvo l'input dell'utente
+      var utente = $('#cerca').val();
+      console.log(utente);
+      //salvo in una var tutti i nomi della chat
+      var nomi = $ ('.chat');
+      var testo;
+      // faccio ciclare i nomi
+      nomi.each(
+        function () {
+          testo = $(this).text();
+          console.log(testo);
+
+          if (testo.toLowerCase().includes(utente.toLowerCase())) {
+            $ (this).show();
+          }else {
+            $ (this).hide();
+           }
+        }
+      )
+      // var confronto = testo.lastIndexOf(utente);
+      // console.log(confronto);
+    }
   )
-  }
+
+}
+
+
 );
