@@ -80,8 +80,8 @@
                 <input id="cerca"type="text" name="" placeholder="Cerca o inizia chat">
               </div>
               <!-- Qui inizia la parte con le chat -->
-              <div class="over">
-                <div class="chat container2">
+              <div class="lista">
+                <div class="chat container2" data-indice="0">
                   <img src="img/avatar1.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -92,7 +92,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="1">
                   <img src="img/avatar2.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -103,7 +103,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="2">
                   <img src="img/avatar3.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -114,7 +114,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="3">
                   <img src="img/avatar4.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -125,7 +125,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="4">
                   <img src="img/avatar5.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -136,7 +136,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="5">
                   <img src="img/avatar6.jpg" alt="profilo">
                   <div>
                     <a class="nome" href="#">
@@ -147,7 +147,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="6">
                   <img src="img/avatar7.jpg" alt="profilo">
                   <div>
                     <a class="nome"href="#">
@@ -158,7 +158,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="chat container2">
+                <div class="chat container2"data-indice="7">
                   <img src="img/avatar8.jpg" alt="profilo">
                   <div>
                     <a class="nome"href="#">
@@ -169,30 +169,32 @@
                     </p>
                   </div>
                 </div>
+
               </div>
+
             </div>
+
 
             <!-- Qui inizia la parte destra del main -->
             <div class="main-right">
-              <div class="over">
-                <div class="left">
-                  <div class="ricevuto">
-                    <p class="messaggio">
-                      Ciao, come stai?
-                    </p>
-                    <p class="orario">
-                      10.25
-                    </p>
-                  </div>
-                  <div class="ricevuto">
-                    <p class="messaggio">
-                      Ciao, come stai?
-                    </p>
-                    <p class="orario">
-                      12.17
-                    </p>
-                  </div>
+              <div class="over active" data-indice = "0">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
                 </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
                 <div class="flotta">
                   <div class="inviato">
                     <p class="messaggio">
@@ -201,11 +203,237 @@
                     <p class="orario">
                       17.16
                     </p>
+
                   </div>
 
                 </div>
 
               </div>
+              <div class="over" data-indice = "1">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, che fai oggi?
+                  </p>
+                  <p class="orario">
+                    10.45
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, sei libero?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Ciao, tutto bene e tu?
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "2">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, lavori oggi?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, allora?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Ciao, no non lavoro?
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "3">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, ci vediamo?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, ma rispondi?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Ciao, come stai?
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "4">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, tutto bene?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Ciao, sì tutto bene
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "5">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, auguri
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      stai passando una bella giornata?
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "6">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, buona Pasqua
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    come stai?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Bene, grazie, auguri anche a te
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="over" data-indice = "7">
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    Ciao, come stai?
+                  </p>
+                  <p class="orario">
+                    10.25
+                  </p>
+                </div>
+                <div class="ricevuto">
+                  <p class="messaggio">
+                    tutto bene?
+                  </p>
+                  <p class="orario">
+                    12.17
+                  </p>
+                </div>
+
+                <div class="flotta">
+                  <div class="inviato">
+                    <p class="messaggio">
+                      Sì, grazie
+                    </p>
+                    <p class="orario">
+                      17.16
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
           </main>
 

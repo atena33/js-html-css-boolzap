@@ -13,7 +13,7 @@ $ (document).ready(function(){
       // Salvo l'input dell'utente
       var utente = $ ('#msg').val();
 
-      $ ('.flotta').append('<div class="inviato">' + utente + '<p class = "orario">' + orario + '</p>'+ '</div>');
+      $ ('.over.active').append('<div class= "flotta">'+'<div class="inviato">' + utente + '<p class = "orario">' + orario + '</p>'+ '</div>'+'</div>');
       $('#msg').val("");
 
       // Risposta dall’interlocutore: ad ogni inserimento di un messaggio,
@@ -21,7 +21,7 @@ $ (document).ready(function(){
 
       setTimeout(risposta, 1000);
       function risposta() {
-        $('.over').append('<div class="ricevuto">' + 'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
+        $('.over.active').append('<div class="ricevuto">' + 'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
       }
     }
   );
@@ -31,10 +31,10 @@ $ (document).ready(function(){
   //  contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar”
   //   rimangono solo Marco e Martina)
 
-  $('#cerca').keypress(
+  $('#cerca').keyup(
     function(){
       //salvo l'input dell'utente
-      var utente = $('#cerca').val();
+      var utente = $(this).val();
       console.log(utente);
       //salvo in una var tutti i nomi della chat
       var nomi = $ ('.chat');
@@ -42,22 +42,30 @@ $ (document).ready(function(){
       // faccio ciclare i nomi
       nomi.each(
         function () {
-          testo = $(this).text();
+          testo = $(this).find('.nome').text();
           console.log(testo);
 
           if (testo.toLowerCase().includes(utente.toLowerCase())) {
             $ (this).show();
           }else {
             $ (this).hide();
-           }
         }
-      )
-      // var confronto = testo.lastIndexOf(utente);
-      // console.log(confronto);
-    }
-  )
+      });
+    });
+    // Click sul contatto mostra la conversazione del contatto cliccato,
+    // è possibile inserire nuovi messaggi per ogni conversazione
+    $ ('.chat').click(
+      function () {
+        var indice = $ (this).data('indice');
+        $ ('.chat').removeClass('active');
+        $(this).addClass('active');
+        $('.over').removeClass('active');
+        $('.over').eq(indice).addClass('active');
 
-}
+    });
 
 
-);
+  // Cancella messaggio: cliccando sul messaggio appare un menu a tendina
+  // che permette di cancellare il messaggio selezionato
+
+});

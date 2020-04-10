@@ -150,27 +150,35 @@ main {
   background-color: lightgray;
 
 }
-
+.lista {
+  overflow-y:scroll;
+  height: 100%;
+}
 .over {
   overflow-y:scroll;
   height: 100%;
+  display: none;
+}
+
+.main-right .active {
+  display: block;
+}
+
+.lista .active {
+  background-color: lightgray;
 }
 /* Qui inizia la parte destra del main */
 .main-right {
   height: calc(100% - 70px);
   width: 67%;
   background-image: url(../img/Sfondo.jpg);
-  content: "";
-  display: table;
-  clear: both;
 }
-
 
 .flotta {
-   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
+  display: flex;
+  justify-content: flex-end;
+
+ }
 
 .ricevuto, .inviato  {
   padding: 20px;
@@ -181,12 +189,14 @@ main {
   position: relative;
   display: block;
 }
-.inviato {
+
+.flotta .inviato{
   background: lightgreen;
+
 }
 .messaggio {
   color: black;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .orario {
@@ -218,11 +228,4 @@ footer {
 footer i {
   font-size: 30px;
   color: gray;
-}
-
-.visible {
-  display: block;
-}
-.invisible {
-  display: none;
 }
