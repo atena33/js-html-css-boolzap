@@ -90,18 +90,20 @@ main {
   display: flex;
   align-items: center;
 }
-/* Qui iniziano le regole della parte sinistra del mains */
+/* Qui iniziano le regole della parte sinistra del main */
 .main-left {
   background: white;
   width: 33%;
   display: flex;
   flex-direction: column;
 }
+
 .fa-bell-slash{
   font-size: 25px;
   color: white;
   padding: 30px 15px;
 }
+
 .notifiche {
   width: 100%;
   background: #8EDAFC;
@@ -173,12 +175,27 @@ main {
   width: 67%;
   background-image: url(../img/Sfondo.jpg);
 }
+.menu {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: none;
+}
+
+.voce-menu {
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  background-color: white;
+  padding: 10px;
+  z-index: 999;
+  display: none;
+}
 
 .flotta {
   display: flex;
   justify-content: flex-end;
-
- }
+}
 
 .ricevuto, .inviato  {
   padding: 20px;
@@ -192,8 +209,8 @@ main {
 
 .flotta .inviato{
   background: lightgreen;
-
 }
+
 .messaggio {
   color: black;
   font-size: 14px;
@@ -228,4 +245,8 @@ footer {
 footer i {
   font-size: 30px;
   color: gray;
+}
+
+.invia {
+  padding-right: 30px;
 }

@@ -8,12 +8,13 @@ $ (document).ready(function(){
   var minuti = d.getMinutes();
   var orario = ora + ':' + minuti;
 
-  $ ('.invia').click(
+
+  $ ('.quadrato').on("click", ".invia",
     function(){
       // Salvo l'input dell'utente
       var utente = $ ('#msg').val();
 
-      $ ('.over.active').append('<div class= "flotta">'+'<div class="inviato">' + utente + '<p class = "orario">' + orario + '</p>'+ '</div>'+'</div>');
+      $ ('.over.active').append('<div class="flotta">' + '<div class="inviato">'+'<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+ utente + '<p class = "orario">' + orario + '</p>' + '</div>' + '</div>');
       $('#msg').val("");
 
       // Risposta dall’interlocutore: ad ogni inserimento di un messaggio,
@@ -21,10 +22,9 @@ $ (document).ready(function(){
 
       setTimeout(risposta, 1000);
       function risposta() {
-        $('.over.active').append('<div class="ricevuto">' + 'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
+        $('.over.active').append('<div class="ricevuto">' + '<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
       }
-    }
-  );
+  });
 
   // Ricerca utenti: scrivendo qualcosa nell’input a sinistra,
   // vengono visualizzati solo i contatti il cui nome
@@ -52,6 +52,7 @@ $ (document).ready(function(){
         }
       });
     });
+
     // Click sul contatto mostra la conversazione del contatto cliccato,
     // è possibile inserire nuovi messaggi per ogni conversazione
     $ ('.chat').click(
@@ -64,8 +65,20 @@ $ (document).ready(function(){
 
     });
 
-
   // Cancella messaggio: cliccando sul messaggio appare un menu a tendina
   // che permette di cancellare il messaggio selezionato
+     $('.over').on("mouseenter", '.ricevuto, .inviato',
+       function (){
+        $(this).children('.menu').toggle();
+    });
 
+     $('.over').on("click", ".menu",
+       function(){
+         $ (this).siblings('.voce-menu').toggle();
+    });
+
+     $ ('.over').on('click', '.voce-menu',
+      function (){
+       $ (this).parents('.ricevuto, .inviato').hide();
+    });
 });
