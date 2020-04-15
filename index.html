@@ -559,7 +559,29 @@
         </section>
       </section>
     </section>
+
+    <!-- Template -->
+    <script id="msg-template" type="text/x-handlebars-template">
+      <div class="flotta">
+        <div class="inviato">
+         <div class="menu">
+            <i class="freccia fas fa-chevron-down"></i>
+          </div>
+          <div class="voce-menu">
+              Cancella messaggio
+          </div>
+          <p class="messaggio">
+            {{messaggio}}
+          </p>
+          <p class="orario">
+            {{orario}}
+          </p>
+        </div>
+    </div>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main/main.js" charset="utf-8"></script>
+
   </body>
 </html>

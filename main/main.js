@@ -37,7 +37,17 @@ $ (document).ready(function(){
     // Salvo l'input dell'utente
     var utente = $ ('#msg').val();
 
-    $ ('.over.active').append('<div class="flotta">' + '<div class="inviato">'+'<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+ utente + '<p class = "orario">' + orario + '</p>' + '</div>' + '</div>');
+
+    var source = $('#msg-template').html();
+    // $('.classe').addClass('flotta');
+    // var ricevuto =$ ('.send').addClass('inviato')
+    var template = Handlebars.compile(source);
+    var context = { messaggio: utente, orario:orario, flotta: ('.flotta')};
+    var html = template(context);
+    $ ('.over.active').append(html);
+
+
+    // $ ('.over.active').append('<div class="flotta">' + '<div class="inviato">'+'<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+ utente + '<p class = "orario">' + orario + '</p>' + '</div>' + '</div>');
     $('#msg').val("");
 
     // Risposta dall’interlocutore: ad ogni inserimento di un messaggio,
@@ -45,7 +55,12 @@ $ (document).ready(function(){
 
     setTimeout(risposta, 1000);
     function risposta() {
-      $('.over.active').append('<div class="ricevuto">' + '<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
+      var source = $('#msg-template').html()
+      var context = {messaggio: 'ok', orario:orario};
+      var html = template(context);
+
+      $('.over.active').append(html)
+      // ('<div class="ricevuto">' + '<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
     };
   };
 
