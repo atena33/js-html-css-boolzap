@@ -42,7 +42,7 @@ $ (document).ready(function(){
     // $('.classe').addClass('flotta');
     // var ricevuto =$ ('.send').addClass('inviato')
     var template = Handlebars.compile(source);
-    var context = { messaggio: utente, orario:orario, flotta: ('.flotta')};
+    var context = { 'messaggio': utente, 'orario':orario, 'flotta': 'flotta', 'message': 'inviato'};
     var html = template(context);
     $ ('.over.active').append(html);
 
@@ -55,11 +55,10 @@ $ (document).ready(function(){
 
     setTimeout(risposta, 1000);
     function risposta() {
-      var source = $('#msg-template').html()
-      var context = {messaggio: 'ok', orario:orario};
-      var html = template(context);
+      var context2 = {'messaggio': 'ok', 'orario':orario, 'message': 'ricevuto'};
+      var html2 = template(context2);
 
-      $('.over.active').append(html)
+      $('.over.active').append(html2)
       // ('<div class="ricevuto">' + '<div class="menu">'+'<i class="freccia fas fa-chevron-down">'+'</i>'+'</div>'+'<div class="voce-menu">'+ "cancella messaggio"+'</div>'+'ok' + '<p class = "orario">' + orario + '</p>'+ '</div>');
     };
   };
